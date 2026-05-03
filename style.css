@@ -633,3 +633,240 @@ display:none;
         padding:30px;
     }
 }
+@media screen and (max-width: 1024px){
+
+    .hero h1{
+        font-size:5rem;
+    }
+
+    .about-section{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+
+    .about-right{
+        justify-content:center;
+    }
+
+    .about-visual{
+        width:100%;
+        max-width:500px;
+        height:420px;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    nav{
+        padding:18px 5%;
+        height:80px;
+    }
+
+    .logo-img{
+        width:130px;
+    }
+
+    .menu{
+        gap:18px;
+    }
+
+    .menu a{
+        font-size:0.85rem;
+    }
+
+    .hero{
+        padding:120px 20px 80px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:3.6rem;
+        line-height:1;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:1rem;
+        max-width:90%;
+        line-height:1.7;
+    }
+
+    .hero button{
+        padding:15px 30px;
+        font-size:0.95rem;
+    }
+
+    .section{
+        padding:100px 6%;
+    }
+
+    .section h2{
+        font-size:2.5rem;
+        margin-bottom:40px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .service-card{
+        padding:35px 28px;
+    }
+
+    .about-left h2{
+        font-size:2.5rem;
+        line-height:1.15;
+    }
+
+    .about-left p{
+        font-size:0.95rem;
+    }
+
+    .about-stats{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .stat-box{
+        width:100%;
+    }
+
+    .about-visual{
+        width:100%;
+        height:380px;
+    }
+
+    .service-slide h3{
+        font-size:1.6rem;
+    }
+
+    .service-slide p{
+        font-size:0.95rem;
+    }
+
+    .contact-box{
+        width:92%;
+        padding:28px;
+        border-radius:25px;
+    }
+
+    .contact-option{
+        min-height:80px;
+        padding:16px;
+    }
+
+    .contact-icon{
+        width:52px;
+        height:52px;
+        min-width:52px;
+        font-size:1.3rem;
+    }
+
+    .contact-text h4{
+        font-size:0.95rem;
+    }
+
+    .contact-text p{
+        font-size:0.82rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    nav{
+        height:75px;
+        padding:16px 4%;
+    }
+
+    .logo-img{
+        width:115px;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:100vh;
+        padding-top:100px;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
+        line-height:1;
+    }
+
+    .hero p{
+        font-size:0.92rem;
+        max-width:100%;
+    }
+
+    .tag{
+        font-size:0.75rem;
+        padding:8px 18px;
+    }
+
+    button{
+        width:100%;
+        max-width:260px;
+        padding:15px;
+    }
+
+    .section{
+        padding:80px 5%;
+    }
+
+    .section h2{
+        font-size:2rem;
+    }
+
+    .service-card{
+        border-radius:22px;
+    }
+
+    .icon{
+        width:58px;
+        height:58px;
+        font-size:1.5rem;
+    }
+
+    .about-left h2{
+        font-size:2rem;
+    }
+
+    .about-visual{
+        height:320px;
+    }
+
+    .service-slide span{
+        font-size:3rem;
+    }
+
+    .service-slide h3{
+        font-size:1.3rem;
+    }
+
+    .service-slide p{
+        font-size:0.88rem;
+    }
+
+    .contact-box h3{
+        font-size:1.5rem;
+    }
+
+    .contact-option{
+        gap:14px;
+        padding:14px;
+    }
+
+    .contact-icon{
+        width:48px;
+        height:48px;
+        min-width:48px;
+    }
+}
