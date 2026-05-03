@@ -627,104 +627,84 @@ display:none;
     }
 }
 
-@media(max-width:600px){
-    .contact-box{
-        width:90%;
-        padding:30px;
-    }
-}
-@media screen and (max-width: 1024px){
+/* ================= MOBILE RESPONSIVE ================= */
 
-    .hero h1{
-        font-size:5rem;
-    }
+@media (max-width: 992px){
 
     .about-section{
         grid-template-columns:1fr;
         gap:60px;
     }
 
-    .about-right{
-        justify-content:center;
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:5rem;
     }
 
     .about-visual{
         width:100%;
         max-width:500px;
-        height:420px;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
+        margin:auto;
     }
 }
 
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
 
     nav{
         padding:18px 5%;
         height:80px;
     }
 
+    .menu{
+        display:none;
+    }
+
     .logo-img{
         width:130px;
     }
 
-    .menu{
-        gap:18px;
-    }
-
-    .menu a{
-        font-size:0.85rem;
-    }
-
     .hero{
-        padding:120px 20px 80px;
-        text-align:center;
+        padding:120px 25px 80px;
+        min-height:100vh;
+    }
+
+    .hero-content{
+        width:100%;
     }
 
     .hero h1{
-        font-size:3.6rem;
+        font-size:3.4rem;
         line-height:1;
         letter-spacing:-2px;
     }
 
     .hero p{
         font-size:1rem;
-        max-width:90%;
+        max-width:100%;
         line-height:1.7;
     }
 
-    .hero button{
-        padding:15px 30px;
-        font-size:0.95rem;
-    }
-
     .section{
-        padding:100px 6%;
+        padding:90px 6%;
     }
 
     .section h2{
         font-size:2.5rem;
-        margin-bottom:40px;
     }
 
     .services-grid{
         grid-template-columns:1fr;
-        gap:25px;
     }
 
     .service-card{
-        padding:35px 28px;
+        padding:35px 25px;
     }
 
     .about-left h2{
-        font-size:2.5rem;
-        line-height:1.15;
-    }
-
-    .about-left p{
-        font-size:0.95rem;
+        font-size:2.6rem;
     }
 
     .about-stats{
@@ -737,46 +717,16 @@ display:none;
     }
 
     .about-visual{
-        width:100%;
         height:380px;
-    }
-
-    .service-slide h3{
-        font-size:1.6rem;
-    }
-
-    .service-slide p{
-        font-size:0.95rem;
     }
 
     .contact-box{
         width:92%;
-        padding:28px;
-        border-radius:25px;
-    }
-
-    .contact-option{
-        min-height:80px;
-        padding:16px;
-    }
-
-    .contact-icon{
-        width:52px;
-        height:52px;
-        min-width:52px;
-        font-size:1.3rem;
-    }
-
-    .contact-text h4{
-        font-size:0.95rem;
-    }
-
-    .contact-text p{
-        font-size:0.82rem;
+        padding:30px;
     }
 }
 
-@media screen and (max-width: 480px){
+@media (max-width: 480px){
 
     nav{
         height:75px;
@@ -787,23 +737,16 @@ display:none;
         width:115px;
     }
 
-    .menu{
-        display:none;
-    }
-
     .hero{
-        min-height:100vh;
-        padding-top:100px;
+        padding-top:110px;
     }
 
     .hero h1{
-        font-size:2.7rem;
-        line-height:1;
+        font-size:2.6rem;
     }
 
     .hero p{
         font-size:0.92rem;
-        max-width:100%;
     }
 
     .tag{
@@ -814,25 +757,14 @@ display:none;
     button{
         width:100%;
         max-width:260px;
-        padding:15px;
     }
 
     .section{
-        padding:80px 5%;
+        padding:75px 5%;
     }
 
     .section h2{
         font-size:2rem;
-    }
-
-    .service-card{
-        border-radius:22px;
-    }
-
-    .icon{
-        width:58px;
-        height:58px;
-        font-size:1.5rem;
     }
 
     .about-left h2{
@@ -843,30 +775,22 @@ display:none;
         height:320px;
     }
 
-    .service-slide span{
-        font-size:3rem;
-    }
-
-    .service-slide h3{
-        font-size:1.3rem;
-    }
-
-    .service-slide p{
-        font-size:0.88rem;
-    }
-
-    .contact-box h3{
-        font-size:1.5rem;
-    }
-
     .contact-option{
-        gap:14px;
         padding:14px;
+        gap:14px;
     }
 
     .contact-icon{
         width:48px;
         height:48px;
         min-width:48px;
+    }
+
+    .contact-text h4{
+        font-size:0.95rem;
+    }
+
+    .contact-text p{
+        font-size:0.8rem;
     }
 }
