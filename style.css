@@ -11,6 +11,14 @@ background:#060606;
 color:#f5f5f5;
 overflow-x:hidden;
 }
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+*{
+    max-width:100%;
+}
 
 .grain{
 position:fixed;
@@ -75,13 +83,15 @@ nav{
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
+height:auto;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 position:relative;
 overflow:hidden;
+padding:120px 20px 80px;
 background:linear-gradient(180deg,#080808,#0f1209,#050505);
 }
 
@@ -282,7 +292,8 @@ left:20%;
 }
 
 .about-visual{
-    width:450px;
+    width:100%;
+    max-width:450px;
     height:500px;
     border-radius:40px;
     background:linear-gradient(145deg,#111,#181818);
@@ -629,15 +640,21 @@ display:none;
 
 /* ================= MOBILE RESPONSIVE ================= */
 
-@media (max-width: 992px){
+@media screen and (max-width: 991px){
 
     .about-section{
-        grid-template-columns:1fr;
+        display:flex;
+        flex-direction:column;
         gap:60px;
     }
 
+    .about-right,
+    .about-left{
+        width:100%;
+    }
+
     .services-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr 1fr;
     }
 
     .hero h1{
@@ -646,29 +663,35 @@ display:none;
 
     .about-visual{
         width:100%;
-        max-width:500px;
-        margin:auto;
+        max-width:100%;
+        height:420px;
     }
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
     nav{
+        height:auto;
         padding:18px 5%;
-        height:80px;
     }
 
     .menu{
         display:none;
     }
 
+    .logo-container{
+        width:100%;
+        display:flex;
+        align-items:center;
+    }
+
     .logo-img{
-        width:130px;
+        width:120px !important;
     }
 
     .hero{
-        padding:120px 25px 80px;
         min-height:100vh;
+        padding:120px 20px 80px;
     }
 
     .hero-content{
@@ -676,23 +699,23 @@ display:none;
     }
 
     .hero h1{
-        font-size:3.4rem;
+        font-size:3rem;
         line-height:1;
-        letter-spacing:-2px;
+        word-break:break-word;
     }
 
     .hero p{
         font-size:1rem;
+        width:100%;
         max-width:100%;
-        line-height:1.7;
     }
 
     .section{
-        padding:90px 6%;
+        padding:80px 6%;
     }
 
     .section h2{
-        font-size:2.5rem;
+        font-size:2.3rem;
     }
 
     .services-grid{
@@ -700,16 +723,17 @@ display:none;
     }
 
     .service-card{
-        padding:35px 25px;
+        width:100%;
+        padding:30px;
     }
 
     .about-left h2{
-        font-size:2.6rem;
+        font-size:2.3rem;
     }
 
     .about-stats{
+        display:flex;
         flex-direction:column;
-        gap:18px;
     }
 
     .stat-box{
@@ -717,24 +741,31 @@ display:none;
     }
 
     .about-visual{
-        height:380px;
+        height:350px;
     }
 
     .contact-box{
-        width:92%;
-        padding:30px;
+        width:95%;
+        padding:25px;
+    }
+
+    .contact-option{
+        width:100%;
     }
 }
 
-@media (max-width: 480px){
+@media screen and (max-width: 480px){
+
+    body{
+        overflow-x:hidden;
+    }
 
     nav{
-        height:75px;
-        padding:16px 4%;
+        padding:14px 4%;
     }
 
     .logo-img{
-        width:115px;
+        width:105px !important;
     }
 
     .hero{
@@ -742,16 +773,16 @@ display:none;
     }
 
     .hero h1{
-        font-size:2.6rem;
+        font-size:2.2rem;
     }
 
     .hero p{
-        font-size:0.92rem;
+        font-size:0.9rem;
     }
 
     .tag{
-        font-size:0.75rem;
-        padding:8px 18px;
+        font-size:0.7rem;
+        padding:8px 16px;
     }
 
     button{
@@ -760,24 +791,24 @@ display:none;
     }
 
     .section{
-        padding:75px 5%;
+        padding:70px 5%;
     }
 
     .section h2{
-        font-size:2rem;
+        font-size:1.9rem;
     }
 
     .about-left h2{
-        font-size:2rem;
+        font-size:1.8rem;
     }
 
     .about-visual{
-        height:320px;
+        height:300px;
     }
 
     .contact-option{
         padding:14px;
-        gap:14px;
+        gap:12px;
     }
 
     .contact-icon{
@@ -787,10 +818,10 @@ display:none;
     }
 
     .contact-text h4{
-        font-size:0.95rem;
+        font-size:0.9rem;
     }
 
     .contact-text p{
-        font-size:0.8rem;
+        font-size:0.78rem;
     }
 }
