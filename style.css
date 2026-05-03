@@ -675,10 +675,7 @@ display:none;
         padding:18px 5%;
     }
 
-    .menu{
-        display:none;
-    }
-
+   
     .logo-container{
         width:100%;
         display:flex;
@@ -823,5 +820,47 @@ display:none;
 
     .contact-text p{
         font-size:0.78rem;
+    }
+}
+@media screen and (max-width:768px){
+
+    nav{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:75px;
+        padding:0 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        background:rgba(6,6,6,0.92);
+        backdrop-filter:blur(20px);
+        z-index:9999;
+    }
+
+    .logo-container{
+        display:flex;
+        align-items:center;
+        height:100%;
+        z-index:10000;
+    }
+
+    .logo-img{
+        width:115px !important;
+        height:auto;
+        transform:none;
+    }
+
+    .menu{
+        display:flex !important;
+        gap:18px;
+        align-items:center;
+    }
+
+    .menu a{
+        font-size:0.8rem;
+        color:#d8d8d8;
+        text-decoration:none;
     }
 }
