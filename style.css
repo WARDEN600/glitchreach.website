@@ -833,3 +833,11 @@ display:none;
 section{
     background: transparent;
 }
+/* FORCE DARK THEME EVERYWHERE */
+body,
+section,
+.about-section,
+#about {
+    background: #060606 !important;
+    color: #f5f5f5;
+}
