@@ -725,11 +725,15 @@ display:none;
     }
 
     /* ABOUT */
-    .about-section {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 100px 6%;
-    }
+    .about-section{
+    padding:160px 8%;
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:80px;
+    align-items:center;
+
+    background:#060606 !important; /* FORCE DARK */
+}
 
     .about-left h2 {
         font-size: 2.2rem;
@@ -825,4 +829,7 @@ display:none;
         width: 100px;
     }
 
+}
+section{
+    background: transparent;
 }
