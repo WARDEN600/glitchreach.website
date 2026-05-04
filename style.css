@@ -929,3 +929,10 @@ display:none;
     transform-style:preserve-3d;
     transition:transform 0.2s ease;
 }
+@media(max-width:768px){
+    .orb,
+    .cursor,
+    .cursor-trail{
+        display:none;
+    }
+}
