@@ -841,5 +841,76 @@ section{
 }
 
 #about{
-    background:#060606 !important;
+    background:#060606 ;
+}
+@media (max-width:768px){
+
+    /* NAV */
+    nav{
+        height:65px;
+        padding:0 4%;
+    }
+
+    .logo-img{
+        width:100px;
+    }
+
+    /* HERO */
+    .hero{
+        min-height: calc(100vh - 65px);
+        padding:20px 15px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+        line-height:1.1;
+    }
+
+    .hero p{
+        font-size:0.9rem;
+    }
+
+    /* SECTIONS */
+    .section{
+        padding:80px 6%;
+    }
+
+    .section h2{
+        font-size:2.2rem;
+    }
+
+    /* SERVICES */
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    /* ABOUT */
+    .about-section{
+        grid-template-columns:1fr;
+        padding:90px 6%;
+        gap:40px;
+    }
+
+    .about-left h2{
+        font-size:2.2rem;
+    }
+
+    .about-left p{
+        font-size:0.9rem;
+    }
+
+    .about-stats{
+        justify-content:center;
+    }
+
+    .stat-box{
+        width:100%;
+    }
+
+    .about-visual{
+        width:100%;
+        height:300px;
+    }
+
 }
