@@ -7,7 +7,7 @@ scroll-behavior:smooth;
 }
 
 body{
- background: red !important;
+
 color:#f5f5f5;
 overflow-x:hidden;
  padding-top: 65px;
@@ -30,16 +30,16 @@ nav{
     width: 100%;
 
     height: 70px;
-    padding: 0 20px;
+    padding: 0 6%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: #000; /* solid black so it’s visible */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: #060606; /* final color */
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 
-    z-index: 999999;
+    z-index: 99999;
 }
 .logo-container{
     display:flex;
