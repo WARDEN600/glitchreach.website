@@ -35,8 +35,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background: #060606; /* solid so it’s always visible */
+background: #060606;
+border-bottom: 1px solid rgba(255,255,255,0.08); /* solid so it’s always visible */
 
     z-index: 999999 !important; /* force top layer */
 }
@@ -78,7 +78,8 @@ nav{
 }
 
 .hero{
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
     display:flex;
     justify-content:center;
     align-items:center;
