@@ -1,60 +1,50 @@
-function scrollToServices(){
-document.getElementById("services").scrollIntoView({behavior:"smooth"});
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-/* CONTACT MODAL */
+    const slides = document.querySelectorAll('.service-slide');
+    let currentSlide = 0;
+
+    function rotateSlides() {
+
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        });
+
+        slides[currentSlide].classList.add('active');
+
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+    }
+
+    rotateSlides();
+
+    setInterval(() => {
+        rotateSlides();
+    }, 2500);
+
+});
 function openContactModal(){
-document.getElementById("contactModal").classList.add("active");
+    document.getElementById('contactModal').classList.add('active');
 }
 
 function closeContactModal(){
-document.getElementById("contactModal").classList.remove("active");
+    document.getElementById('contactModal').classList.remove('active');
 }
 
-/* SLIDER */
-const slides=document.querySelectorAll(".service-slide");
-let index=0;
+window.addEventListener('click',(e)=>{
+    const modal = document.getElementById('contactModal');
 
-setInterval(()=>{
-slides.forEach(s=>s.classList.remove("active"));
-slides[index].classList.add("active");
-index=(index+1)%slides.length;
-},2500);
-
-/* BACKGROUND */
-const canvas=document.getElementById("bgCanvas");
-const ctx=canvas.getContext("2d");
-
-function resize(){
-canvas.width=innerWidth;
-canvas.height=innerHeight;
-}
-resize();
-window.addEventListener("resize",resize);
-
-let particles=[];
-
-for(let i=0;i<120;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-dx:(Math.random()-0.5)*0.5,
-dy:(Math.random()-0.5)*0.5
+    if(e.target === modal){
+        modal.classList.remove('active');
+    }
 });
+function scrollToServices() {
+    const servicesSection = document.getElementById('services');
+
+    servicesSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
-
-function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-particles.forEach(p=>{
-p.x+=p.dx;
-p.y+=p.dy;
-
-ctx.fillStyle="#c5ff5c";
-ctx.fillRect(p.x,p.y,2,2);
-});
-
-requestAnimationFrame(animate);
-}
-
-animate();
