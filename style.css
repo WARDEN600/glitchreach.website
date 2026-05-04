@@ -15,9 +15,13 @@ body{
     background:#060606;
     color:#fff;
     overflow-x:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center; /* THIS FIXES LEFT SHIFT */
+    /* THIS FIXES LEFT SHIFT */
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
 }
 .section,
 .hero,
@@ -32,10 +36,8 @@ body{
 nav{
     position:fixed;
     top:0;
-    left:50%;
-    transform:translateX(-50%);
+    left:0;
     width:100%;
-    max-width:1200px;
     height:80px;
     display:flex;
     justify-content:space-between;
@@ -65,7 +67,7 @@ text-decoration:none;
 }`
 
 /* HERO */
-.hero{
+..hero{
     width:100%;
     min-height:100vh;
     display:flex;
@@ -73,6 +75,8 @@ text-decoration:none;
     align-items:center;
     text-align:center;
     padding-top:100px;
+    position:relative;
+    z-index:1;
 }
 .hero-content{
     max-width:900px;
@@ -123,9 +127,6 @@ border-radius:20px;
 
 /* ABOUT */
 .about-section{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
@@ -163,8 +164,11 @@ opacity:1;
     background:#111;
     padding:30px;
     border-radius:20px;
+  
     width:90%;
-    max-width:420px;
+    max-width:400px;
+    margin:auto;
+
 }
 
 .contact-option{
