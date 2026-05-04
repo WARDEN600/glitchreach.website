@@ -19,6 +19,21 @@ html, body{
 *{
     max-width:100%;
 }
+body{
+    opacity:0;
+    animation:pageReveal 1.2s ease forwards;
+}
+
+@keyframes pageReveal{
+    from{
+        opacity:0;
+        transform:scale(1.05);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
 
 .grain{
 position:fixed;
@@ -863,4 +878,54 @@ display:none;
         color:#d8d8d8;
         text-decoration:none;
     }
+}
+/* CURSOR */
+.cursor{
+    width:12px;
+    height:12px;
+    background:#c5ff5c;
+    border-radius:50%;
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+    z-index:99999;
+    transform:translate(-50%, -50%);
+}
+
+.cursor-trail{
+    width:35px;
+    height:35px;
+    border:1px solid rgba(197,255,92,0.4);
+    border-radius:50%;
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+    z-index:99998;
+    transform:translate(-50%, -50%);
+    transition:0.15s ease;
+}
+
+/* NEON ORB */
+.orb{
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:radial-gradient(circle, rgba(197,255,92,0.15), transparent 60%);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:-1;
+    transform:translate(-50%, -50%);
+    filter:blur(60px);
+}
+
+/* HERO PARALLAX */
+.hero{
+    perspective:1000px;
+}
+
+.hero-content{
+    transform-style:preserve-3d;
+    transition:transform 0.2s ease;
 }
