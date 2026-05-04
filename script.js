@@ -105,3 +105,81 @@ document.querySelectorAll(".magnetic").forEach(btn=>{
         btn.style.transform = "translate(0,0)";
     });
 });
+const canvas = document.getElementById("bgCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let particles = [];
+
+class Particle {
+    constructor(){
+        this.x = Math.random()*canvas.width;
+        this.y = Math.random()*canvas.height;
+        this.size = Math.random()*2 + 0.5;
+        this.speedX = Math.random()*0.6 - 0.3;
+        this.speedY = Math.random()*0.6 - 0.3;
+    }
+
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if(this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if(this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+
+    draw(){
+        ctx.fillStyle = "rgba(197,255,92,0.7)";
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+        ctx.fill();
+    }
+}
+
+function initParticles(){
+    particles = [];
+    for(let i=0;i<100;i++){
+        particles.push(new Particle());
+    }
+}
+
+function connect(){
+    for(let a=0;a<particles.length;a++){
+        for(let b=a;b<particles.length;b++){
+            let dx = particles[a].x - particles[b].x;
+            let dy = particles[a].y - particles[b].y;
+            let dist = dx*dx + dy*dy;
+
+            if(dist < 12000){
+                ctx.strokeStyle = "rgba(197,255,92,0.08)";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particles[a].x, particles[a].y);
+                ctx.lineTo(particles[b].x, particles[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+        p.update();
+        p.draw();
+    });
+
+    connect();
+
+    requestAnimationFrame(animate);
+}
+
+initParticles();
+animate();
