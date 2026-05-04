@@ -15,8 +15,6 @@ overflow-x:hidden;
 body{
 background:#060606;
 color:#f5f5f5;
-
-/* Page Load Animation */
 opacity:0;
 animation:pageReveal 1.2s ease forwards;
 }
@@ -96,7 +94,6 @@ align-items:center;
 text-align:center;
 padding:120px 20px 80px;
 position:relative;
-overflow:hidden;
 background:linear-gradient(180deg,#080808,#0f1209,#050505);
 }
 
@@ -106,8 +103,6 @@ width:100%;
 margin:auto;
 position:relative;
 z-index:2;
-
-/* Entry Animation */
 opacity:0;
 transform:translateY(50px);
 animation:heroReveal 1.2s ease forwards;
@@ -121,10 +116,9 @@ transform:translateY(0);
 }
 
 .hero h1{
-font-size:6rem;
-line-height:1;
+font-size:clamp(2.5rem,6vw,6rem);
+line-height:1.1;
 letter-spacing:-2px;
-text-align:center;
 }
 
 .hero p{
@@ -261,7 +255,6 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-/* Disable heavy effects */
 #bgCanvas,
 .orb{
 display:none;
