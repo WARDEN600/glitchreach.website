@@ -841,3 +841,14 @@ section,
     background: #060606 !important;
     color: #f5f5f5;
 }
+body{
+    background:#060606;
+}
+
+section{
+    background:transparent;
+}
+
+#about{
+    background:#060606 !important;
+}
