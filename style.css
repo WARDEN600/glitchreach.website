@@ -10,6 +10,7 @@ body{
 background:#060606;
 color:#f5f5f5;
 overflow-x:hidden;
+ padding-top: 90px;
 }
 
 .grain{
@@ -75,14 +76,12 @@ nav{
 }
 
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-background:linear-gradient(180deg,#080808,#0f1209,#050505);
+    min-height: calc(100vh - 90px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding: 40px 20px;
 }
 
 .hero-content{
@@ -639,6 +638,12 @@ display:none;
 ========================= */
 
 @media (max-width: 768px) {
+    
+    
+
+     body{
+        padding-top: 70px;
+    }
 
     /* NAVBAR */
     nav {
@@ -646,21 +651,20 @@ display:none;
         padding: 0 5%;
     }
 
- .logo-img {
-    width: 180px;
-    transform: none; /* REMOVE translateY */
-}
+
+    .logo-img{
+        width: 110px;
+    }
 
     .menu {
         display: none;
     }
 
     /* HERO SECTION */
-    .hero {
-        padding: 0 15px;
-        height: 100vh;
+    .hero{
+        min-height: calc(100vh - 70px);
+        padding: 20px 15px;
     }
-
     .hero h1 {
         font-size: 2.8rem;
         letter-spacing: -1px;
@@ -686,6 +690,11 @@ display:none;
     .section {
         padding: 90px 6%;
     }
+    .section,
+.about-section {
+    width: 100%;
+    overflow-x: hidden;
+}
 
     .section h2 {
         font-size: 2.2rem;
@@ -693,11 +702,10 @@ display:none;
     }
 
     /* SERVICES */
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
     .service-card {
         padding: 30px 20px;
     }
@@ -763,4 +771,32 @@ display:none;
         width: 45px;
         height: 45px;
     }
+}
+@media (max-width:768px){
+
+    h1{
+        font-size:2.5rem !important;
+    }
+
+    h2{
+        font-size:2rem !important;
+    }
+
+    p{
+        font-size:0.9rem;
+    }
+
+    .hero-content{
+        padding: 0 10px;
+    }
+
+    .about-left,
+    .about-right{
+        text-align:center;
+    }
+
+    .about-stats{
+        justify-content:center;
+    }
+
 }
