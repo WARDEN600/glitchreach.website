@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitch Reach — Digital + Performance Marketing</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 3D Canvas Background -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- Noise Grain -->
+<div class="grain"></div>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo-container">
+    <img src="logo.png" alt="Glitch Reach Logo" class="logo-img">
+  </div>
+  <div class="menu">
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-grid"></div>
+
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge reveal-up">
+      <span class="badge-dot"></span>
+      Digital + Performance Marketing
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line-wrap"><span class="line reveal-line">GLITCH THE SYSTEM,</span></span>
+      
+      <span class="line-wrap accent-line"><span class="line reveal-line delay-2">REACH THE WORLD</span></span>
+    </h1>
+
+    <p class="hero-sub reveal-up delay-3">Clicks. Culture. Chaos. <span class="text-accent">Conversion.</span></p>
+
+    <div class="hero-cta reveal-up delay-4">
+      <button class="btn-primary magnetic" onclick="smoothScrollTo('#services')">
+        <span>Explore Agency</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn-ghost magnetic" onclick="openContactModal()">
+        Work With Us
+      </button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </div>
+
+  <!-- 3D Tilt Card -->
+  <div class="hero-3d-card" id="heroCard">
+    <div class="card-inner">
+      <div class="card-glow"></div>
+      <div class="card-content">
+        <div class="card-stat">
+          <span class="stat-num counter" data-target="150">0</span><span class="stat-suffix">+</span>
+          <p>Projects Delivered</p>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-stat">
+          <span class="stat-num counter" data-target="98">0</span><span class="stat-suffix">%</span>
+          <p>Client Retention</p>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-stat">
+          <span class="stat-num counter" data-target="3">0</span><span class="stat-suffix">x</span>
+          <p>Avg ROI Growth</p>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <span class="card-label">Surat, Gujarat</span>
+        <div class="card-pulse"></div>
+        <span class="card-live">LIVE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Performance Marketing</span><span class="dot">✦</span>
+    <span>Reel Shooting</span><span class="dot">✦</span>
+    <span>Brand Strategy</span><span class="dot">✦</span>
+    <span>Social Media</span><span class="dot">✦</span>
+    <span>Graphic Design</span><span class="dot">✦</span>
+    <span>Model Providing</span><span class="dot">✦</span>
+    <span>Performance Marketing</span><span class="dot">✦</span>
+    <span>Reel Shooting</span><span class="dot">✦</span>
+    <span>Brand Strategy</span><span class="dot">✦</span>
+    <span>Social Media</span><span class="dot">✦</span>
+    <span>Graphic Design</span><span class="dot">✦</span>
+    <span>Model Providing</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="section services-section">
+  <div class="section-header">
+    <span class="section-tag">OUR SERVICES</span>
+    <h2 class="section-title">What We <span class="text-accent">Do</span></h2>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card s-card" data-index="0">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">01</div>
+      <div class="s-icon">📈</div>
+      <h3>Performance<br>Marketing</h3>
+      <p>ROI-focused campaigns that scale brands fast through paid ads and smart audience targeting.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+    <div class="service-card s-card" data-index="1">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">02</div>
+      <div class="s-icon">🎬</div>
+      <h3>Reel Shooting<br>& Editing</h3>
+      <p>Scroll-stopping cinematic reels designed to increase engagement and create viral reach.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+    <div class="service-card s-card" data-index="2">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">03</div>
+      <div class="s-icon">🎨</div>
+      <h3>Graphic<br>Designing</h3>
+      <p>Luxury visuals, branding assets, social creatives, and high-converting marketing designs.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+    <div class="service-card s-card" data-index="3">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">04</div>
+      <div class="s-icon">📱</div>
+      <h3>Social Media<br>Management</h3>
+      <p>Content planning, growth strategy, posting, and engagement for strong online presence.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+    <div class="service-card s-card" data-index="4">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">05</div>
+      <div class="s-icon">👑</div>
+      <h3>Model<br>Providing</h3>
+      <p>Professional models and creators for shoots, campaigns, branding visuals, and promotions.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+    <div class="service-card s-card" data-index="5">
+      <div class="s-card-bg"></div>
+      <div class="s-card-number">06</div>
+      <div class="s-icon">🚀</div>
+      <h3>Brand<br>Strategy</h3>
+      <p>We build positioning, identity, storytelling, and digital growth strategies for brands.</p>
+      <div class="s-card-arrow">→</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+
+  <div class="about-left">
+    <span class="section-tag">ABOUT GLITCH REACH</span>
+    <h2 class="about-title">We Don't<br>Just Market.<br><span class="text-accent">We Build<br>Attention.</span></h2>
+    <p>Glitch Reach is a digital and performance marketing agency based in Surat, Gujarat, helping brands grow through strategy, visuals, storytelling, and paid performance.</p>
+    <p>From social media management to cinematic reels, branding, model providing, and high-converting ad campaigns — we create experiences that make brands unforgettable.</p>
+
+    <div class="about-stats">
+      <div class="stat-box">
+        <h3>Creative</h3>
+        <span>Performance Marketing</span>
+      </div>
+      <div class="stat-box">
+        <h3>Global</h3>
+        <span>Digital Services</span>
+      </div>
+      <div class="stat-box">
+        <h3>Fresh</h3>
+        <span>Modern Brand Vision</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-right">
+    <div class="about-visual" id="aboutVisual">
+      <div class="about-visual-bg"></div>
+      <div class="service-slider">
+        <div class="service-slide active"><span>📈</span><h3>Performance Marketing</h3><p>Scaling brands through ROI-driven paid campaigns.</p></div>
+        <div class="service-slide"><span>🎬</span><h3>Reel Editing</h3><p>High-retention cinematic content for social media.</p></div>
+        <div class="service-slide"><span>🎨</span><h3>Graphic Design</h3><p>Luxury visuals that create instant brand identity.</p></div>
+        <div class="service-slide"><span>📱</span><h3>Social Media</h3><p>Consistent growth through strategy + content.</p></div>
+        <div class="service-slide"><span>👑</span><h3>Model Providing</h3><p>Professional faces for premium brand campaigns.</p></div>
+        <div class="service-slide"><span>🚀</span><h3>Brand Strategy</h3><p>Building positioning that makes brands unforgettable.</p></div>
+      </div>
+      <div class="about-orb"></div>
+      <!-- Floating 3D elements -->
+      <div class="float-badge fb-1">ROI +300%</div>
+      <div class="float-badge fb-2">Viral Content</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="contact-bg-text">REACH</div>
+
+  <div class="contact-inner">
+    <span class="section-tag">GET IN TOUCH</span>
+    <h2 class="section-title">Let's Build<br>Something <span class="text-accent">Viral</span></h2>
+
+    <div class="contact-details">
+      <div class="contact-detail-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Surat, Gujarat</span>
+      </div>
+      <div class="contact-detail-item">
+        <i class="fa-brands fa-instagram"></i>
+        <span>@glitchreach</span>
+      </div>
+    </div>
+
+    <div class="contact-founders">
+      <a href="tel:+918799058687" class="founder-card">
+        <div class="founder-icon">N</div>
+        <div>
+          <h4>Nityam</h4>
+          <p>+91 8799058687</p>
+        </div>
+      </a>
+      <a href="tel:+916359263722" class="founder-card">
+        <div class="founder-icon">V</div>
+        <div>
+          <h4>Via</h4>
+          <p>+91 6359263722</p>
+        </div>
+      </a>
+    </div>
+
+    <button class="btn-primary magnetic btn-xl" onclick="openContactModal()">
+      <span>Work With Us</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ===== MODAL ===== -->
+<div class="contact-modal" id="contactModal">
+  <div class="contact-box">
+    <span class="close-modal" onclick="closeContactModal()">✕</span>
+    <h3>Connect With <span class="text-accent">Glitch Reach</span></h3>
+    <div class="contact-options">
+
+      <a href="https://wa.me/918799058687" target="_blank" class="contact-option">
+        <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-text"><h4>WhatsApp — Nityam</h4><p>Chat directly on WhatsApp</p></div>
+        <div class="co-arrow">→</div>
+      </a>
+
+      <a href="https://wa.me/916359263722" target="_blank" class="contact-option">
+        <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-text"><h4>WhatsApp — Via</h4><p>Connect instantly on WhatsApp</p></div>
+        <div class="co-arrow">→</div>
+      </a>
+
+      <a href="https://www.instagram.com/glitchreach/" target="_blank" class="contact-option">
+        <div class="contact-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+        <div class="contact-text"><h4>Instagram</h4><p>Open Glitch Reach Profile</p></div>
+        <div class="co-arrow">→</div>
+      </a>
+
+      <a href="mailto:glitchreach49@gmail.com" class="contact-option">
+        <div class="contact-icon gmail"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-text"><h4>Email</h4><p>Open Gmail Compose</p></div>
+        <div class="co-arrow">→</div>
+      </a>
+
+      <a href="tel:+918799058687" class="contact-option">
+        <div class="contact-icon call"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-text"><h4>Call Founder</h4><p>Open Phone Dialer</p></div>
+        <div class="co-arrow">→</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
